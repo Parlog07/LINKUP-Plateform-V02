@@ -1,0 +1,6 @@
+-- Active: 1768468455063@@127.0.0.1@5432@LINKUP
+ALTER Table Users ADD COLUMN username VARCHAR(255) NOT NULL;
+AlTER TAble Users ADD COLUMN bio Varchar(255);
+ALTER TABLE Users ADD COLUMN photo VARCHAR(255);
+
+select * from Users;

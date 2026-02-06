@@ -16,21 +16,21 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-    // public function actions(){
-    //     return $this->hasMany(PostAction::class);
-    // }
+    public function actions(){
+        return $this->hasMany(PostAction::class);
+    }
     
-    // public function likes(){
-    //     return $this->hasMany(PostAction::class)->where('action_type', 'like');
-    // }
+    public function likes(){
+        return $this->hasMany(PostAction::class)->where('action_type', 'like');
+    }
 
-    // public function comments(){
-    //     return $this->hasMany(PostAction::class)->where('action_type', 'comment')->latest();
-    // }
+    public function comments(){
+        return $this->hasMany(PostAction::class)->where('action_type', 'comment')->latest();
+    }
 
-    // public function isLikedBy($user){
-    //     if (!$user) return false;
+    public function isLikedBy($user){
+        if (!$user) return false;
 
-    //     return $this->likes()->where('user_id', $user->id)->exists();
-    // }
+        return $this->likes()->where('user_id', $user->id)->exists();
+    }
 }

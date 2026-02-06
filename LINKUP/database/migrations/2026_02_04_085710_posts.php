@@ -17,6 +17,8 @@ return new class extends Migration
         $table->text('content')->nullable();
         $table->string('media_path')->nullable();
         $table->string('media_type')->nullable();
+        $table->enum('status', ['approved', 'pending', 'blocked'])->default('approved');
+        $table->text('moderation_reason')->nullable();
         $table->timestamps();
     });
     
